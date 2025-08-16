@@ -1,0 +1,10 @@
+2025-08-16 13:51:06 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:51:06 | INFO     | setup_logging        | STEGANOGRAPHY SESSION STARTED
+2025-08-16 13:51:06 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:51:06 | INFO     | setup_logging        | Session ID: session_20250816_135106
+2025-08-16 13:51:06 | INFO     | setup_logging        | Timestamp: 2025-08-16 13:51:06.372685
+2025-08-16 13:51:06 | INFO     | setup_logging        | Python Version: 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]
+2025-08-16 13:51:06 | INFO     | setup_logging        | Working Directory: C:\Users\mdred\Music\image\Scripts
+2025-08-16 13:51:06 | INFO     | setup_logging        | Session Log: Output/Sessions/session_20250816_135106/logs\execution_log_20250816_135106.txt
+2025-08-16 13:51:06 | INFO     | setup_logging        | Main Log: Output/Logs\steganography_log_20250816_135106.txt
+2025-08-16 13:51:06 | INFO     | setup_logging        | ================================================================================

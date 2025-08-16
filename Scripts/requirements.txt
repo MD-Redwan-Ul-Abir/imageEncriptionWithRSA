@@ -1,0 +1,12 @@
+# Steganography Script Requirements
+# Install with: pip install -r requirements.txt
+
+numpy>=1.21.0
+opencv-python>=4.5.0
+PyWavelets>=1.1.1
+Pillow>=8.0.0
+cryptography>=3.4.0
+
+# Optional packages for enhanced functionality
+matplotlib>=3.3.0  # For visualization (optional)
+tqdm>=4.60.0       # For progress bars (optional)

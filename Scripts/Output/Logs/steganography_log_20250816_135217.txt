@@ -1,0 +1,41 @@
+2025-08-16 13:52:17 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:52:17 | INFO     | setup_logging        | STEGANOGRAPHY SESSION STARTED
+2025-08-16 13:52:17 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:52:17 | INFO     | setup_logging        | Session ID: session_20250816_135217
+2025-08-16 13:52:17 | INFO     | setup_logging        | Timestamp: 2025-08-16 13:52:17.615784
+2025-08-16 13:52:17 | INFO     | setup_logging        | Python Version: 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]
+2025-08-16 13:52:17 | INFO     | setup_logging        | Working Directory: C:\Users\mdred\Music\image\Scripts
+2025-08-16 13:52:17 | INFO     | setup_logging        | Session Log: Output/Sessions/session_20250816_135217/logs\execution_log_20250816_135217.txt
+2025-08-16 13:52:17 | INFO     | setup_logging        | Main Log: Output/Logs\steganography_log_20250816_135217.txt
+2025-08-16 13:52:17 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:52:19 | INFO     | <module>             | User selected option: 1
+2025-08-16 13:52:19 | INFO     | test_precision_fixed_structured | Starting precision-fixed steganography test with structured organization
+2025-08-16 13:52:21 | INFO     | test_precision_fixed_structured | Image path provided: C:\Users\mdred\Music\image\Input_Images\test_image.jpg
+2025-08-16 13:52:27 | INFO     | test_precision_fixed_structured | Secret message length: 16 characters
+2025-08-16 13:52:27 | DEBUG    | test_precision_fixed_structured | Secret message content: 'tumi to valo nah'
+2025-08-16 13:52:27 | INFO     | test_precision_fixed_structured | Attempting to load image: C:\Users\mdred\Music\image\Input_Images\test_image.jpg
+2025-08-16 13:52:27 | DEBUG    | test_precision_fixed_structured | Original image shape: (256, 256, 3)
+2025-08-16 13:52:27 | INFO     | test_precision_fixed_structured | Image loaded and resized from (256, 256) to 512x512
+2025-08-16 13:52:27 | INFO     | test_precision_fixed_structured | Initializing steganography system with structured file management
+2025-08-16 13:52:27 | INFO     | __init__             | Initializing PrecisionFixedDWTLSBSteganography system
+2025-08-16 13:52:27 | INFO     | generate_rsa_keys    | Starting RSA-2048 key generation...
+2025-08-16 13:52:27 | INFO     | generate_rsa_keys    | RSA-2048 Keys generated successfully
+2025-08-16 13:52:27 | DEBUG    | generate_rsa_keys    | Key generation time: 0.032 seconds
+2025-08-16 13:52:27 | DEBUG    | generate_rsa_keys    | Public exponent: 65537
+2025-08-16 13:52:27 | DEBUG    | generate_rsa_keys    | Key size: 2048 bits
+2025-08-16 13:52:27 | INFO     | rsa_encrypt          | Starting RSA encryption...
+2025-08-16 13:52:27 | DEBUG    | rsa_encrypt          | Original message: 'tumi to valo nah'
+2025-08-16 13:52:27 | DEBUG    | rsa_encrypt          | Message length (characters): 16
+2025-08-16 13:52:27 | DEBUG    | rsa_encrypt          | Message length (bytes): 16
+2025-08-16 13:52:27 | INFO     | rsa_encrypt          | RSA encryption successful: 256 bytes
+2025-08-16 13:52:27 | DEBUG    | rsa_encrypt          | Encryption time: 0.001 seconds
+2025-08-16 13:52:27 | DEBUG    | rsa_encrypt          | Encrypted data size: 256 bytes
+2025-08-16 13:52:27 | INFO     | save_stego_image_structured | Stego image saved to session: Output/Sessions/session_20250816_135217/images\test_image_stego_20250816_135217.png
+2025-08-16 13:52:27 | INFO     | save_stego_image_structured | Stego image saved to main: Output/Steganographic_Images\precision_fixed_stego_20250816_135217.png
+2025-08-16 13:52:27 | INFO     | save_keys_structured | RSA keys saved to session: Output/Sessions/session_20250816_135217/keys\private_key_20250816_135217.pem, Output/Sessions/session_20250816_135217/keys\public_key_20250816_135217.pem
+2025-08-16 13:52:27 | INFO     | save_keys_structured | RSA keys saved to main: Output/Keys\private_key.pem, Output/Keys\public_key.pem
+2025-08-16 13:52:27 | INFO     | save_session_metadata | Session metadata saved to: Output/Sessions/session_20250816_135217/metadata\session_metadata_20250816_135217.json
+2025-08-16 13:52:27 | INFO     | test_precision_fixed_structured | Test completed successfully
+2025-08-16 13:52:27 | INFO     | <module>             | ================================================================================
+2025-08-16 13:52:27 | INFO     | <module>             | STEGANOGRAPHY SESSION COMPLETED
+2025-08-16 13:52:27 | INFO     | <module>             | ================================================================================

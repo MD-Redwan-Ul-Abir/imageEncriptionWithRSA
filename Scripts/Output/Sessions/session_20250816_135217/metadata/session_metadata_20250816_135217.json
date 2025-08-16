@@ -1,0 +1,31 @@
+{
+  "input_image_path": "C:\\Users\\mdred\\Music\\image\\Input_Images\\test_image.jpg",
+  "input_image_shape": [
+    256,
+    256,
+    3
+  ],
+  "secret_message_length": 16,
+  "test_start_timestamp": "2025-08-16T13:52:27.672540",
+  "embedding_completed": true,
+  "original_message_length": 16,
+  "encrypted_message_length": 256,
+  "binary_message_length": 2048,
+  "embedding_timestamp": "2025-08-16T13:52:27.681245",
+  "stego_image_session_path": "Output/Sessions/session_20250816_135217/images\\test_image_stego_20250816_135217.png",
+  "stego_image_main_path": "Output/Steganographic_Images\\precision_fixed_stego_20250816_135217.png",
+  "original_image_name": "C:\\Users\\mdred\\Music\\image\\Input_Images\\test_image.jpg",
+  "stego_image_saved_timestamp": "2025-08-16T13:52:27.697380",
+  "private_key_path": "Output/Sessions/session_20250816_135217/keys\\private_key_20250816_135217.pem",
+  "public_key_path": "Output/Sessions/session_20250816_135217/keys\\public_key_20250816_135217.pem",
+  "keys_saved_timestamp": "2025-08-16T13:52:27.700325",
+  "original_message": "tumi to valo nah",
+  "extracted_message": "tumi to valo nah",
+  "success": true,
+  "test_end_timestamp": "2025-08-16T13:52:27.705405",
+  "session_id": "session_20250816_135217",
+  "timestamp": "20250816_135217",
+  "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "working_directory": "C:\\Users\\mdred\\Music\\image\\Scripts",
+  "session_end_timestamp": "2025-08-16T13:52:27.708834"
+}

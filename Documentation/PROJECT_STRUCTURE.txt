@@ -1,0 +1,198 @@
+================================================
+    STEGANOGRAPHY PROJECT STRUCTURE
+================================================
+
+This document describes the organized structure of the steganography project.
+
+================================================
+DIRECTORY STRUCTURE:
+================================================
+
+Steganography_Project/
+│
+├── Scripts/                                    # Main scripts and dependencies
+│   ├── precision_fixed_dwt_lsb_steganography.py   # Main steganography script
+│   └── requirements.txt                            # Python package dependencies
+│
+├── Documentation/                              # All documentation files
+│   ├── EXECUTION_GUIDE.txt                        # Detailed execution instructions
+│   ├── SETUP_AND_FILES.txt                        # Setup and file organization guide
+│   └── PROJECT_STRUCTURE.txt                      # This file
+│
+├── Input_Images/                               # Source images for steganography
+│   ├── test_image.jpg                              # Sample test image (512x512)
+│   └── (your images here)                         # Add your 512x512 images here
+│
+├── Output/                                     # All generated output files
+│   ├── Steganographic_Images/                     # Images with hidden messages
+│   │   └── precision_fixed_stego.png              # Generated steganographic images
+│   │
+│   ├── Keys/                                       # RSA encryption keys
+│   │   ├── private_key.pem                        # Private key (KEEP SECURE!)
+│   │   └── public_key.pem                         # Public key
+│   │
+│   └── Logs/                                       # Execution logs
+│       └── steganography_log_YYYYMMDD_HHMMSS.txt  # Detailed execution logs
+│
+└── Batch_Scripts/                              # Helper batch files for Windows
+    ├── setup_environment.bat                      # Install dependencies
+    ├── run_steganography.bat                      # Run steganography script
+    └── process_multiple.bat                       # Batch process multiple images
+
+================================================
+USAGE WORKFLOW:
+================================================
+
+1. INITIAL SETUP:
+   - Run Batch_Scripts/setup_environment.bat to install dependencies
+   - Place your 512x512 images in Input_Images/ folder
+
+2. RUNNING STEGANOGRAPHY:
+   - Use Batch_Scripts/run_steganography.bat for easy execution
+   - Or navigate to Scripts/ and run: python precision_fixed_dwt_lsb_steganography.py
+
+3. OUTPUT ORGANIZATION:
+   - Steganographic images are saved to Output/Steganographic_Images/
+   - RSA keys are saved to Output/Keys/
+   - Detailed logs are saved to Output/Logs/
+
+4. ANALYSIS:
+   - Check Output/Logs/ for detailed execution analysis
+   - Review logs to understand each step of the process
+
+================================================
+FILE DESCRIPTIONS:
+================================================
+
+SCRIPTS:
+--------
+precision_fixed_dwt_lsb_steganography.py
+- Main steganography script with logging
+- Implements DWT-LSB steganography with RSA encryption
+- Automatically logs all operations to timestamped files
+
+requirements.txt
+- Lists all required Python packages
+- Use with: pip install -r requirements.txt
+
+DOCUMENTATION:
+--------------
+EXECUTION_GUIDE.txt
+- Complete step-by-step execution instructions
+- Troubleshooting guide
+- Performance notes and tips
+
+SETUP_AND_FILES.txt
+- File organization and setup instructions
+- Dependency explanations
+- Security and backup guidelines
+
+PROJECT_STRUCTURE.txt
+- This file describing the project organization
+
+BATCH SCRIPTS:
+--------------
+setup_environment.bat
+- Automated dependency installation
+- Environment verification
+- Error handling for common issues
+
+run_steganography.bat
+- Easy script execution
+- Automatic directory navigation
+- Error checking and user feedback
+
+================================================
+LOGGING FEATURES:
+================================================
+
+The enhanced script now includes comprehensive logging:
+
+LOG LEVELS:
+- INFO: Major operations and status updates
+- DEBUG: Detailed technical information
+- ERROR: Error messages and failures
+- WARNING: Potential issues and warnings
+
+LOG CONTENTS:
+- System information (Python version, working directory)
+- User inputs (image path, message length)
+- Timing information for each operation
+- RSA key generation and encryption details
+- DWT coefficient analysis
+- Image processing metrics
+- Success/failure status
+- Error details and stack traces
+
+LOG FILE NAMING:
+- Format: steganography_log_YYYYMMDD_HHMMSS.txt
+- Example: steganography_log_20240816_143022.txt
+- Automatically saved to Output/Logs/ directory
+
+================================================
+SECURITY CONSIDERATIONS:
+================================================
+
+PRIVATE KEY SECURITY:
+- private_key.pem is CRITICAL for message decryption
+- Store in secure location with backups
+- Never share via insecure channels
+- Consider additional encryption for storage
+
+LOG FILE SECURITY:
+- Log files contain message lengths and timing data
+- Do NOT contain actual message content
+- May contain image file paths
+- Store securely if privacy is important
+
+ACCESS CONTROL:
+- Limit access to Output/Keys/ directory
+- Set appropriate file permissions
+- Consider encrypting backup storage
+
+================================================
+PERFORMANCE MONITORING:
+================================================
+
+The logs help monitor:
+- Processing time for each operation
+- Memory usage patterns
+- Image quality metrics
+- Embedding capacity utilization
+- Error rates and patterns
+
+Use this data to:
+- Optimize image selection
+- Tune processing parameters
+- Identify performance bottlenecks
+- Plan batch processing schedules
+
+================================================
+MAINTENANCE:
+================================================
+
+REGULAR TASKS:
+- Archive old log files
+- Backup critical private keys
+- Update dependencies periodically
+- Test with new image formats
+
+CLEANUP:
+- Remove temporary files
+- Archive completed projects
+- Organize processed images
+- Update documentation
+
+MONITORING:
+- Check log files for errors
+- Monitor disk space usage
+- Verify key file integrity
+- Test restore procedures
+
+================================================
+
+Created: 2024-08-16
+Version: 1.0
+Compatible with: Windows 10+, Python 3.7+
+
+================================================

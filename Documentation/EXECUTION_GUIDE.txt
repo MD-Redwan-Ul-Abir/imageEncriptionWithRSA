@@ -1,0 +1,252 @@
+===============================================
+    STEGANOGRAPHY SCRIPT EXECUTION GUIDE
+===============================================
+
+OVERVIEW:
+This guide explains how to execute the precision-fixed DWT-LSB steganography script
+for hiding and extracting secret messages in 512x512 images with comprehensive logging.
+
+===============================================
+1. SYSTEM REQUIREMENTS
+===============================================
+
+- Python 3.7 or higher
+- Windows 10/11 (tested on Windows 10)
+- At least 100MB free disk space
+- 512x512 pixel image file (PNG, JPG, BMP supported)
+
+===============================================
+2. INSTALLATION STEPS
+===============================================
+
+Step 1: Install Required Python Packages
+----------------------------------------
+Run the following command in Command Prompt or PowerShell:
+
+    pip install numpy opencv-python PyWavelets pillow cryptography
+
+Or use the provided requirements file:
+
+    pip install -r requirements.txt
+
+Step 2: Verify Installation
+---------------------------
+Test if packages are installed correctly:
+
+    python -c "import numpy, cv2, pywt, PIL, cryptography; print('All packages installed successfully')"
+
+===============================================
+3. PREPARING YOUR IMAGE
+===============================================
+
+Image Requirements:
+- Dimensions: 512x512 pixels (mandatory)
+- Formats: PNG, JPG, JPEG, BMP
+- File size: Recommended under 5MB
+- Color: RGB (color images work best)
+
+If your image is not 512x512:
+- The script will automatically resize it to 512x512
+- Original aspect ratio may be changed
+
+Sample command to check image dimensions:
+    python -c "from PIL import Image; img=Image.open('your_image.jpg'); print(f'Size: {img.size}')"
+
+===============================================
+4. EXECUTION METHODS
+===============================================
+
+METHOD 1: Interactive Mode (Recommended for beginners)
+------------------------------------------------------
+1. Open Command Prompt/PowerShell in the script directory
+2. Run: python precision_fixed_dwt_lsb_steganography.py
+3. Choose option "1" for test mode
+4. Enter your image path when prompted: your_image.jpg
+5. Enter your secret message when prompted
+6. Script will automatically:
+   - Embed the message
+   - Create steganographic image
+   - Extract and verify the message
+   - Generate log file with all operations
+
+METHOD 2: Automated Execution
+-----------------------------
+For repeated use, create an input file:
+
+1. Create a text file called "input.txt" with:
+   1
+   your_image.jpg
+   Your secret message here
+
+2. Run: python precision_fixed_dwt_lsb_steganography.py < input.txt
+
+METHOD 3: Command Line with Logging
+-----------------------------------
+Use the enhanced version with automatic logging:
+
+    python steganography_with_logging.py --image your_image.jpg --message "Your secret"
+
+===============================================
+5. OUTPUT FILES EXPLAINED
+===============================================
+
+After successful execution, you will find these files:
+
+1. precision_fixed_stego.png
+   - The steganographic image containing your hidden message
+   - Looks identical to original but contains encrypted data
+   - Share this file to transmit hidden messages
+
+2. private_key.pem
+   - RSA private key for decryption
+   - KEEP THIS SECURE - needed to extract messages
+   - Do not share this file
+
+3. public_key.pem
+   - RSA public key for encryption
+   - Used during embedding process
+   - Can be shared if needed
+
+4. steganography_log_YYYYMMDD_HHMMSS.txt
+   - Complete execution log with all steps
+   - Detailed analysis of the embedding/extraction process
+   - Use this for debugging and verification
+
+===============================================
+6. EXTRACTING HIDDEN MESSAGES
+===============================================
+
+To extract a message from a steganographic image:
+
+1. Ensure you have the private_key.pem file
+2. Run the script in interactive mode
+3. Choose option "2" for interactive mode
+4. Provide the steganographic image path
+5. The script will automatically extract and decrypt the message
+
+Note: You MUST have the same private key that was used during embedding!
+
+===============================================
+7. TROUBLESHOOTING
+===============================================
+
+Common Issues:
+
+ERROR: "ModuleNotFoundError"
+Solution: Reinstall required packages using pip install command
+
+ERROR: "Could not load image"
+Solution: Check image path and ensure file exists and is readable
+
+ERROR: "RSA Decryption failed"
+Solution: Ensure you're using the correct private key file
+
+ERROR: "Unicode encoding error"
+Solution: Use Command Prompt with: chcp 65001 before running script
+
+Image Quality Issues:
+- Use high-quality images (minimal compression)
+- Avoid images with very dark or very bright areas
+- PNG format generally works better than JPG
+
+===============================================
+8. SECURITY CONSIDERATIONS
+===============================================
+
+1. Key Management:
+   - Keep private_key.pem secure and backed up
+   - Never share private keys via insecure channels
+   - Consider using different keys for different messages
+
+2. Message Security:
+   - Messages are encrypted with RSA-2048 before embedding
+   - Even if someone detects steganography, message remains encrypted
+   - For maximum security, use strong, unique messages
+
+3. Detection Resistance:
+   - Use high-quality cover images
+   - Avoid suspicious file naming
+   - The DWT-LSB method provides good resistance to detection
+
+===============================================
+9. BATCH PROCESSING
+===============================================
+
+For processing multiple images:
+
+1. Create a batch script (process_multiple.bat):
+   @echo off
+   for %%f in (*.jpg *.png) do (
+       echo Processing %%f...
+       echo 1 > temp_input.txt
+       echo %%f >> temp_input.txt
+       echo Secret message for %%f >> temp_input.txt
+       python precision_fixed_dwt_lsb_steganography.py < temp_input.txt
+       del temp_input.txt
+   )
+
+2. Run: process_multiple.bat
+
+===============================================
+10. PERFORMANCE NOTES
+===============================================
+
+Expected Processing Times (on average hardware):
+- 512x512 image embedding: 2-5 seconds
+- Message extraction: 1-3 seconds
+- Key generation: 1-2 seconds
+
+Memory Usage:
+- Approximately 50-100MB during processing
+- Temporary files cleaned automatically
+
+===============================================
+11. LOG ANALYSIS
+===============================================
+
+The log file contains:
+- Timestamp for each operation
+- RSA encryption/decryption details
+- DWT coefficient analysis
+- Embedding capacity calculations
+- Error messages and warnings
+- Performance metrics
+
+Use the log file to:
+- Verify successful operations
+- Debug failed extractions
+- Analyze embedding capacity
+- Track processing performance
+
+===============================================
+12. ADVANCED USAGE
+===============================================
+
+Custom Message Lengths:
+- Maximum message length: ~200 characters
+- Longer messages may require image quality adjustments
+- Check log file for capacity warnings
+
+Multiple Messages:
+- Each embedding overwrites previous data
+- Use different images for different messages
+- Or extract existing message before embedding new one
+
+Quality Settings:
+- Modify precision settings in script for quality vs. capacity trade-offs
+- Check logs for quality metrics
+
+===============================================
+SUPPORT & TROUBLESHOOTING
+===============================================
+
+If you encounter issues:
+1. Check the generated log file first
+2. Verify all requirements are installed
+3. Ensure image meets 512x512 requirement
+4. Check file permissions in working directory
+
+For detailed analysis, always refer to the generated log files.
+
+Last Updated: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+===============================================

@@ -1,0 +1,41 @@
+2025-08-16 13:27:27 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:27:27 | INFO     | setup_logging        | STEGANOGRAPHY SESSION STARTED
+2025-08-16 13:27:27 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:27:27 | INFO     | setup_logging        | Session ID: session_20250816_132727
+2025-08-16 13:27:27 | INFO     | setup_logging        | Timestamp: 2025-08-16 13:27:27.370857
+2025-08-16 13:27:27 | INFO     | setup_logging        | Python Version: 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]
+2025-08-16 13:27:27 | INFO     | setup_logging        | Working Directory: C:\Users\mdred\Music\image
+2025-08-16 13:27:27 | INFO     | setup_logging        | Session Log: Output/Sessions/session_20250816_132727/logs\execution_log_20250816_132727.txt
+2025-08-16 13:27:27 | INFO     | setup_logging        | Main Log: Output/Logs\steganography_log_20250816_132727.txt
+2025-08-16 13:27:27 | INFO     | setup_logging        | ================================================================================
+2025-08-16 13:27:27 | INFO     | <module>             | User selected option: 1
+2025-08-16 13:27:27 | INFO     | test_precision_fixed_structured | Starting precision-fixed steganography test with structured organization
+2025-08-16 13:27:27 | INFO     | test_precision_fixed_structured | Image path provided: Input_Images/test_image.jpg
+2025-08-16 13:27:27 | INFO     | test_precision_fixed_structured | Secret message length: 71 characters
+2025-08-16 13:27:27 | DEBUG    | test_precision_fixed_structured | Secret message content: 'This is a test with structured file organization and metadata tracking!'
+2025-08-16 13:27:27 | INFO     | test_precision_fixed_structured | Attempting to load image: Input_Images/test_image.jpg
+2025-08-16 13:27:27 | DEBUG    | test_precision_fixed_structured | Original image shape: (256, 256, 3)
+2025-08-16 13:27:27 | INFO     | test_precision_fixed_structured | Image loaded and resized from (256, 256) to 512x512
+2025-08-16 13:27:27 | INFO     | test_precision_fixed_structured | Initializing steganography system with structured file management
+2025-08-16 13:27:27 | INFO     | __init__             | Initializing PrecisionFixedDWTLSBSteganography system
+2025-08-16 13:27:27 | INFO     | generate_rsa_keys    | Starting RSA-2048 key generation...
+2025-08-16 13:27:27 | INFO     | generate_rsa_keys    | RSA-2048 Keys generated successfully
+2025-08-16 13:27:27 | DEBUG    | generate_rsa_keys    | Key generation time: 0.022 seconds
+2025-08-16 13:27:27 | DEBUG    | generate_rsa_keys    | Public exponent: 65537
+2025-08-16 13:27:27 | DEBUG    | generate_rsa_keys    | Key size: 2048 bits
+2025-08-16 13:27:27 | INFO     | rsa_encrypt          | Starting RSA encryption...
+2025-08-16 13:27:27 | DEBUG    | rsa_encrypt          | Original message: 'This is a test with structured file organization and metadata tracking!'
+2025-08-16 13:27:27 | DEBUG    | rsa_encrypt          | Message length (characters): 71
+2025-08-16 13:27:27 | DEBUG    | rsa_encrypt          | Message length (bytes): 71
+2025-08-16 13:27:27 | INFO     | rsa_encrypt          | RSA encryption successful: 256 bytes
+2025-08-16 13:27:27 | DEBUG    | rsa_encrypt          | Encryption time: 0.001 seconds
+2025-08-16 13:27:27 | DEBUG    | rsa_encrypt          | Encrypted data size: 256 bytes
+2025-08-16 13:27:27 | INFO     | save_stego_image_structured | Stego image saved to session: Output/Sessions/session_20250816_132727/images\test_image_stego_20250816_132727.png
+2025-08-16 13:27:27 | INFO     | save_stego_image_structured | Stego image saved to main: Output/Steganographic_Images\precision_fixed_stego_20250816_132727.png
+2025-08-16 13:27:27 | INFO     | save_keys_structured | RSA keys saved to session: Output/Sessions/session_20250816_132727/keys\private_key_20250816_132727.pem, Output/Sessions/session_20250816_132727/keys\public_key_20250816_132727.pem
+2025-08-16 13:27:27 | INFO     | save_keys_structured | RSA keys saved to main: Output/Keys\private_key.pem, Output/Keys\public_key.pem
+2025-08-16 13:27:27 | INFO     | save_session_metadata | Session metadata saved to: Output/Sessions/session_20250816_132727/metadata\session_metadata_20250816_132727.json
+2025-08-16 13:27:27 | INFO     | test_precision_fixed_structured | Test completed successfully
+2025-08-16 13:27:27 | INFO     | <module>             | ================================================================================
+2025-08-16 13:27:27 | INFO     | <module>             | STEGANOGRAPHY SESSION COMPLETED
+2025-08-16 13:27:27 | INFO     | <module>             | ================================================================================

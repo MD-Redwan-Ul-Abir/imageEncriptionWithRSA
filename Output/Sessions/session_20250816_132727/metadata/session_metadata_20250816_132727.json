@@ -1,0 +1,31 @@
+{
+  "input_image_path": "Input_Images/test_image.jpg",
+  "input_image_shape": [
+    256,
+    256,
+    3
+  ],
+  "secret_message_length": 71,
+  "test_start_timestamp": "2025-08-16T13:27:27.398417",
+  "embedding_completed": true,
+  "original_message_length": 71,
+  "encrypted_message_length": 256,
+  "binary_message_length": 2048,
+  "embedding_timestamp": "2025-08-16T13:27:27.406231",
+  "stego_image_session_path": "Output/Sessions/session_20250816_132727/images\\test_image_stego_20250816_132727.png",
+  "stego_image_main_path": "Output/Steganographic_Images\\precision_fixed_stego_20250816_132727.png",
+  "original_image_name": "Input_Images/test_image.jpg",
+  "stego_image_saved_timestamp": "2025-08-16T13:27:27.421928",
+  "private_key_path": "Output/Sessions/session_20250816_132727/keys\\private_key_20250816_132727.pem",
+  "public_key_path": "Output/Sessions/session_20250816_132727/keys\\public_key_20250816_132727.pem",
+  "keys_saved_timestamp": "2025-08-16T13:27:27.423621",
+  "original_message": "This is a test with structured file organization and metadata tracking!",
+  "extracted_message": "This is a test with structured file organization and metadata tracking!",
+  "success": true,
+  "test_end_timestamp": "2025-08-16T13:27:27.429267",
+  "session_id": "session_20250816_132727",
+  "timestamp": "20250816_132727",
+  "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "working_directory": "C:\\Users\\mdred\\Music\\image",
+  "session_end_timestamp": "2025-08-16T13:27:27.432083"
+}
